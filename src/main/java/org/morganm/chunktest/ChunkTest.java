@@ -18,11 +18,11 @@ public class ChunkTest extends JavaPlugin implements Listener
 	
 	@EventHandler
 	public void onPlayerTeleport(PlayerTeleportEvent event) {
-    	Player player = event.getPlayer();
-    	World world = player.getWorld();
-    	Chunk chunk = world.getChunkAt(event.getTo());
-    	int chunkx = chunk.getX();
-    	int chunkz = chunk.getZ();
-    	world.refreshChunk(chunkx, chunkz);
+		Player player = event.getPlayer();
+		World world = player.getWorld();
+		Chunk chunk = world.getChunkAt(event.getTo());
+		int chunkx = chunk.getX();
+		int chunkz = chunk.getZ();
+		world.refreshChunk(chunkx, chunkz);
 	}
 }
